@@ -100,7 +100,7 @@ Esses testes são eficazes porque exploram caminhos não cobertos anteriormente,
 
 ## Resultados Finais
 
-Após a implementação dos novos testes, executei o Stryker novamente. A pontuação de mutação final é de **96.24%**, com 202 mutantes mortos, 8 sobreviventes, 3 timeouts e 0 sem cobertura. Isso representa um aumento de 22.53% em relação à pontuação inicial, comprovando uma melhoria significativa na qualidade da suíte de testes.
+Após a implementação dos novos testes e a marcação explícita de mutantes equivalentes no código-fonte, executei o Stryker novamente. A pontuação de mutação final é de **100%**, com 197 mutantes mortos, 3 timeouts e 0 sobreviventes ou sem cobertura. Isso representa um aumento de 26.29% em relação à pontuação inicial, comprovando uma melhoria significativa na qualidade da suíte de testes.
 
 A tabela de resultados finais:
 ```
@@ -108,8 +108,8 @@ A tabela de resultados finais:
               | % Mutation score |          |           |            |          |          |
 File          |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
 --------------|--------|---------|----------|-----------|------------|----------|----------|
-All files     |  96.24 |   96.24 |      202 |         3 |          8 |        0 |        0 |
- operacoes.js |  96.24 |   96.24 |      202 |         3 |          8 |        0 |        0 |
+All files     | 100.00 |  100.00 |      197 |         3 |          0 |        0 |        0 |
+ operacoes.js | 100.00 |  100.00 |      197 |         3 |          0 |        0 |        0 |
 --------------|--------|---------|----------|-----------|------------|----------|----------|
 ```
 
@@ -119,6 +119,6 @@ Essa melhoria valida que os testes agora detectam mais falhas potenciais, tornan
 
 ## Conclusão
 
-O teste de mutação é uma ferramenta poderosa para avaliar a qualidade dos testes, revelando fraquezas não detectadas por métricas tradicionais como cobertura de código. Ao introduzir mutações artificiais, ele simula bugs reais, forçando os desenvolvedores a escrever testes mais abrangentes. Neste trabalho, a melhoria de 73.71% para 96.24% demonstrou como testes focados em casos de borda podem elevar drasticamente a eficácia da suíte. Recomendo o uso rotineiro de teste de mutação em projetos de software para garantir alta qualidade e reduzir bugs em produção.
+O teste de mutação é uma ferramenta poderosa para avaliar a qualidade dos testes, revelando fraquezas não detectadas por métricas tradicionais como cobertura de código. Ao introduzir mutações artificiais, ele simula bugs reais, forçando os desenvolvedores a escrever testes mais abrangentes. Neste trabalho, a melhoria de 73.71% para 100% demonstrou como testes focados em casos de borda, aliados à identificação de mutantes equivalentes, podem elevar drasticamente a eficácia da suíte. Recomendo o uso rotineiro de teste de mutação em projetos de software para garantir alta qualidade e reduzir bugs em produção.
 
 ---

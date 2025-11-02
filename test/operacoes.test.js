@@ -20,15 +20,20 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
     expect(() => divisao(5, 0)).toThrow('Divisão por zero não é permitida.');
   });
   test('5. deve calcular a potência com expoente positivo', () => { expect(potencia(2, 3)).toBe(8); });
-  test('6. deve calcular a raiz quadrada de um quadrado perfeito', () => { expect(raizQuadrada(16)).toBe(4); });
+  test('6. deve calcular a raiz quadrada', () => { 
+    expect(raizQuadrada(16)).toBe(4);
+    expect(raizQuadrada(0)).toBe(0);
+  });
   test('6b. deve lançar erro para raiz quadrada de negativo', () => { expect(() => raizQuadrada(-1)).toThrow('Não é possível calcular a raiz quadrada de um número negativo.'); });
   test('7. deve retornar o resto da divisão', () => { expect(restoDivisao(10, 3)).toBe(1); });
   test('8. deve calcular o fatorial de um número maior que 1', () => { 
     expect(fatorial(4)).toBe(24);
+    expect(fatorial(2)).toBe(2);
     expect(fatorial(0)).toBe(1);
     expect(fatorial(1)).toBe(1);
     expect(() => fatorial(-1)).toThrow('Fatorial não é definido para números negativos.');
   });
+  test('8b. deve calcular o fatorial de 0', () => { expect(fatorial(0)).toBe(1); });
   test('9. deve calcular a média de um array com múltiplos elementos', () => { 
     expect(mediaArray([10, 20, 30])).toBe(20);
     expect(mediaArray([])).toBe(0);
@@ -78,6 +83,7 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
     expect(isPrimo(7)).toBe(true);
     expect(isPrimo(1)).toBe(false);
     expect(isPrimo(4)).toBe(false);
+    expect(isPrimo(25)).toBe(false);
   });
   test('34. deve calcular o 10º termo de Fibonacci', () => { expect(fibonacci(10)).toBe(55); });
   test('35. deve calcular o produto de um array', () => { 
